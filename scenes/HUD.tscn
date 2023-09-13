@@ -8,7 +8,7 @@ size = 64
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 48
+size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -54,3 +54,8 @@ custom_fonts/font = SubResource( 3 )
 text = "Iniciar nonovo jogo"
 
 [node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="ButtonStart" to="." method="_on_ButtonStart_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
